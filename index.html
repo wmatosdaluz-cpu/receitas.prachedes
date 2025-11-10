@@ -10,18 +10,38 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #111;
       color: #fff;
       text-align: center;
+      position: relative;
+      z-index: 0;
+      background-image: url('https://img.freepik.com/fotos-premium/uma-variedade-de-cortes-de-frango-e-carne-bovina-exibindo-a-variedade-e-versatilidade-das-opcoes-de-carne-fresca_933496-20246.jpg?w=2000'); /* Substitua por sua imagem depois */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Opacidade da camada escura */
+      z-index: -1;
+    }
+
+    header, footer, section {
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     header {
       padding: 20px;
-      background-color: #000;
     }
 
     nav {
-      background-color: #111;
+      background-color: rgba(17, 17, 17, 0.9);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -119,7 +139,7 @@
       margin-top: 40px;
       font-size: 0.9em;
       color: #aaa;
-      padding-bottom: 20px;
+      padding: 20px;
     }
 
     section {
@@ -137,7 +157,7 @@
 <body>
 
   <header>
-    <h1><i>Chega de mi mi mi !</i></h1>
+    <h1><i>Sem de mi mi mi !</i></h1>
     <h2>CHEGARAM AS RECEITAS DO PRACHEDES !!</h2>
     <p>DO CHURRASCO AO COTIDIANO</p>
   </header>
@@ -151,7 +171,7 @@
   </nav>
 
   <div class="main-content" id="inicio">
-    <img src="capa.jpg" alt="Capa do Ebook" class="capa-prachedes">
+    <img src="./img/capa.jpg" alt="Capa do Ebook" class="capa-prachedes">
     <a href="#comprar" class="cta-button">CONHEÇA O EBOOK</a>
   </div>
 
@@ -223,5 +243,3 @@
 
 </body>
 </html>
-
-
